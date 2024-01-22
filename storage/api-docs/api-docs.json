@@ -1,0 +1,57 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Test swagger",
+        "description": "Test swagger",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/book": {
+            "post": {
+                "tags": [
+                    "Book"
+                ],
+                "summary": "Run book create action",
+                "operationId": "27ce23bb2c7da3b131ecd78975c8c8cd",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "author_id": {
+                                        "description": "author identifier",
+                                        "type": "integer"
+                                    },
+                                    "title": {
+                                        "description": "description of book",
+                                        "type": "string"
+                                    },
+                                    "cover_url": {
+                                        "description": "cover url",
+                                        "type": "string"
+                                    },
+                                    "price": {
+                                        "description": "price of book",
+                                        "type": "number",
+                                        "format": "float"
+                                    },
+                                    "quantity": {
+                                        "description": "quantity of book",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        }
+    }
+}
